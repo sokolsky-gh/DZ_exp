@@ -5,7 +5,8 @@ import java.io.*;
 import java.util.Arrays;
 
 public class ReadObject {
-    public static void main(String[] args) {
+    Person[] people;
+    public Person[] read() {
         try {
             FileInputStream fis = new FileInputStream("people.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -21,6 +22,7 @@ public class ReadObject {
             e.printStackTrace();
         }
 
+        return people;
     }
 
 }
