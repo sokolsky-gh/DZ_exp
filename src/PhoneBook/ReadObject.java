@@ -11,7 +11,7 @@ public class ReadObject {
             FileInputStream fis = new FileInputStream("people.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            Person[] people = (Person[]) ois.readObject();
+            people = (Person[]) ois.readObject();
 
             System.out.println(Arrays.toString(people));
 

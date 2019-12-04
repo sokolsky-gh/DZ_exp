@@ -6,8 +6,8 @@ import java.io.ObjectOutputStream;
 
 public class WriteObject {
     public static void main(String[] args) {
-        Person[] phoneListIn = {new Person(1, "89537391800"),
-                new Person(2, "89537391801"), new Person(3, "89537391899")};
+        Person[] phoneListIn = {new Person(1, "89537391814"),
+                new Person(2, "89537391815"), new Person(3, "89537391813")};
 
         ReadObject readObject = new ReadObject();
         readObject.read();
@@ -18,18 +18,20 @@ public class WriteObject {
                 String exNum = readObject.people[n].getName();{
                     if (newNum.equals(exNum)){
                         System.out.println("nonUniquePhoneNumberException");
+                        continue;
                     }else;
                 }
             }
         }
 
         try {
-            FileOutputStream fos = new FileOutputStream("people.bin", false);
+            FileOutputStream fos = new FileOutputStream("people.bin", true);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
 
             oos.writeObject(phoneListIn);
             fos.close();
+            readObject.read();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
