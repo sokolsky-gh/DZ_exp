@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class ReadObject {
     Person[] people;
+
     public Person[] read() {
         try {
             FileInputStream fis = new FileInputStream("people.bin");

@@ -17,7 +17,12 @@ public class WriteObject {
             for(int n = 0; n<readObject.people.length; n++){
                 String exNum = readObject.people[n].getName();{
                     if (newNum.equals(exNum)){
-                        System.out.println("nonUniquePhoneNumberException");
+                        try {
+                            throw new Exception("nonUniquePhoneNumberException");
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                       // System.out.println("nonUniquePhoneNumberException");
                         continue;
                     }else;
                 }
@@ -34,9 +39,6 @@ public class WriteObject {
             readObject.read();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-
     }
 }
